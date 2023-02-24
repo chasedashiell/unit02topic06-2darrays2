@@ -49,28 +49,28 @@ public class Minesweeper {
             for (int col = 0; col < board[0].length; col++){
                 if (board[row][col]){
                     solution[row][col] = -1;
-                    if(row != board.length-1 && solution[row+1][col] != 1){
+                    if(row != board.length-1 && solution[row+1][col] != -1){
                         solution[row+1][col]++;
                     }
-                    if(row != 0 && solution[row-1][col] != 1){
+                    if(row != 0 && solution[row-1][col] != -1){
                         solution[row-1][col]++;
                     }
-                    if(col != board[0].length-1 && row != board.length-1 && solution[row+1][col+1] != 1 ){
+                    if(col != board[0].length-1 && row != board.length-1 && solution[row+1][col+1] != -1 ){
                         solution[row+1][col+1]++;
                     }
-                    if(row!=0 && col!=0 && solution[row-1][col-1] != 1){
+                    if(row!=0 && col!=0 && solution[row-1][col-1] != -1){
                         solution[row-1][col-1]++;
                     }
-                    if(row != board.length-1 && col != 0 && solution[row+1][col-1] != 1){
+                    if(row != board.length-1 && col != 0 && solution[row+1][col-1] != -1){
                         solution[row+1][col-1]++;
                     }
-                    if(col != board[0].length-1 && solution[row][col+1] != 1){
+                    if(col != board[0].length-1 && solution[row][col+1] != -1){
                         solution[row][col+1]++;
                     }
-                    if(col != 0 && solution[row][col-1] != 1){
+                    if(col != 0 && solution[row][col-1] != -1){
                         solution[row][col-1]++;
                     }
-                    if(row != 0 && col != board[0].length-1 && solution[row-1][col+1] != 1){
+                    if(row != 0 && col != board[0].length-1 && solution[row-1][col+1] != -1){
                         solution[row-1][col+1]++;
                     }
 
