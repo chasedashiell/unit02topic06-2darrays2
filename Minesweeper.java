@@ -80,8 +80,7 @@ public class Minesweeper {
         return solution;
     }
     public static void main(String[] args) {
-        boolean[][] arr = makeMinesweeperBoard(3, 3, 0.15);
-        print2DBool(arr);
+        boolean[][] arr = makeMinesweeperBoard(9, 9, 0.15);
         print2DInt(makeNeighborBoard(arr));
 
         // [false, true, false]
